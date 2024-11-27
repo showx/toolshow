@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToolShow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .tool-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        button {
+            margin: 10px 0;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tool-section">
+        <h2>JSON 解析器</h2>
+        <textarea id="jsonInput" placeholder="输入JSON字符串"></textarea>
+        <button onclick="formatJSON()">格式化</button>
+        <textarea id="jsonOutput" readonly></textarea>
+    </div>
+
+    <div class="tool-section">
+        <h2>随机密码生成器</h2>
+        <div>
+            <label>密码长度：<input type="number" id="passwordLength" value="12" min="4" max="32"></label>
+            <label><input type="checkbox" id="includeNumbers" checked> 包含数字</label>
+            <label><input type="checkbox" id="includeSymbols" checked> 包含特殊字符</label>
+        </div>
+        <button onclick="generatePassword()">生成密码</button>
+        <input type="text" id="passwordOutput" readonly>
+    </div>
+
+    <div class="tool-section">
+        <h2>时间戳转换器</h2>
+        <input type="text" id="timestampInput" placeholder="输入时间戳">
+        <button onclick="convertTimestamp()">转换</button>
+        <input type="text" id="timestampOutput" readonly>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html> 
